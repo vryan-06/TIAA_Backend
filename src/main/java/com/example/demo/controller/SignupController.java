@@ -12,29 +12,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.demo.models.VehicleRegistration;
-import com.example.demo.repository.VehicleRegistrationDetails;
+import com.example.demo.models.Signup;
+import com.example.demo.repository.SignupDetails;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
-public class VehicleRegistrationController {
+public class SignupController {
     @Autowired
-    VehicleRegistrationDetails vd;
+    SignupDetails sd;
      
-    @PostMapping("/vehicleReg")
+    @PostMapping("/signup")
     @CrossOrigin
-    public VehicleRegistration postStopsDetails(@RequestBody VehicleRegistration vehicle){
-        return vd.save(vehicle);
+    public Signup postSignupDetails(@RequestBody Signup signup){
+        return sd.save(signup);
     }
     
-    @GetMapping("/vehicleReg")
+    @GetMapping("/signup")
     @CrossOrigin
-    public VehicleRegistration getStopsDetails(@RequestParam String id){
-        Optional<VehicleRegistration> route = vd.findById(id);
-        if(route.isPresent()) {
-            return route.get();
+    public Signup getSignupDetails(@RequestParam String id){
+        Optional<Signup> signup = sd.findById(id);
+        if(signup.isPresent()) {
+            return signup.get();
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehicle not found with id " + id);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Signup not found with id " + id);
         }
     }
     

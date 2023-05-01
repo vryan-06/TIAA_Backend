@@ -16,7 +16,7 @@ import com.example.demo.models.Driver;
 import com.example.demo.repository.DriverDetails;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class DriverController {
     @Autowired
     DriverDetails dd;

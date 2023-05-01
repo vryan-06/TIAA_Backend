@@ -16,7 +16,7 @@ import com.example.demo.models.Stops;
 import com.example.demo.repository.StopsDetails;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class StopsController {
     @Autowired
     StopsDetails sd;

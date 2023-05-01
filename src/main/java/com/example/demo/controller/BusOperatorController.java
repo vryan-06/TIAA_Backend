@@ -17,7 +17,7 @@ import com.example.demo.models.BusOperator;
 import com.example.demo.repository.OperatorDetails;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class BusOperatorController {
 	@Autowired
 	OperatorDetails op;

@@ -16,7 +16,7 @@ import com.example.demo.models.Route;
 import com.example.demo.repository.RouteDetails;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class RouteController {
     @Autowired
     RouteDetails rd;

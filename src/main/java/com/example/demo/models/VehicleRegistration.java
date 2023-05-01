@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "vehicleRegistration")
@@ -7,6 +8,7 @@ public class VehicleRegistration {
 	public VehicleRegistration() {
 		
 	}
+	@Id
 	private String id;
     private String number;
     private String expiry;
